@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prachi's world</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="world-title">PRACHI WORLD</h1>
+<p class="world-subtitle">Curated Collection</p>
+  
+
+<div id="playlistSection">
+  <button class="insta-btn" onclick="openPopup('instaPopup')">
+
+📸 @beingprachi_
+
+</button>
+<div class="playlist-header">
+    <img src="image/cover.jpg" class="cover">
+    <h1>Prachi's Playlist 🎵</h1>
+    <p>Made specially for Prachi ❤️</p>
+    <p class="playlist-info">10 songs • 35 min • Made for Prachi ❤️</p>
+</div>
+<button id="cardBtn">🎴 Card View</button>
+<button id="listBtn">🎧 List View</button>
+<div class="play-section">
+    <button class="main-play">▶ Play Playlist</button>
+</div>
+<div class="now-playing">
+    <img src="image/photo1.jpg" id="nowPlayingImg">
+    <h2 id="nowPlayingSong">Tu Hi Mera</h2>
+    <p>Prachi's Playlist ❤️</p>
+</div>
+<div class="player-controls">
+    <button id="prevBtn">⏮</button>
+    <button id="playPauseBtn">▶</button>
+    <button id="nextBtn">⏭</button>
+</div>
+
+<input type="range" id="progressBar" value="0">
+
+<div class="time-display">
+    <span id="currentTime">0:00</span>
+    <span id="totalTime">0:00</span>
+</div>
+
+<div class="song-card">
+    <img src="image/photo1.jpg">
+    <h3> Tu hi mera </h3>
+    <button onclick="playSong(0)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo2.jpg">
+    <h3> dhoka dhadi </h3>
+    <button onclick="playSong(1)">▶ Play</button>
+</div>
+
+    <div class="song-card">
+    <img src="image/photo3.jpg">
+    <h3> shirt da button </h3>
+    <button onclick="playSong(2)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo4.jpg">
+    <h3> tu hi haqeeqat </h3>
+    <button onclick="playSong(3)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo5.jpg">
+    <h3> maula maula </h3>
+    <button onclick="playSong(4)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo6.jpg">
+    <h3> kinna sona </h3>
+    <button onclick="playSong(5)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo7.jpg">
+    <h3> tera fitoor </h3>
+    <button onclick="playSong(6)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo8.jpg">
+    <h3> fakira </h3>
+    <button onclick="playSong(7)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo9.jpg">
+    <h3> Qafirana </h3>
+    <button onclick="playSong(8)">▶ Play</button>
+</div>
+
+<div class="song-card">
+    <img src="image/photo10.jpg">
+    <h3>Dekh Lena</h3>
+    <button onclick="playSong(9)">▶ Play</button>
+</div>
+
+<button id="secretBtn">💌 Secret Message</button>
+
+<div class="footer-message">
+    <p>
+        Some songs are heard. Some songs are felt.
+        This playlist is for the songs that stay. ❤️
+    </p>
+</div>
+<div id="secretPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>💌 Secret Message</h2>
+
+        <p>
+            Whenever you want to hear your favorite songs,
+            come back here. This playlist will always be
+            waiting for you. 💜🎵
+        </p>
+
+        <button id="closePopup">Close</button>
+
+    </div>
+
+</div>
+</div>
+<div id="profilePopup" class="popup">
+
+<div class="popup-content">
+
+<span class="close"
+onclick="closePopup('profilePopup')">
+×
+</span>
+
+<h2>Meet Prachi ✨</h2>
+
+<p>@beingprachi_</p>
+
+<p>🧿</p>
+
+<p>creator | dreamer | trend lover</p>
+
+<p>curated by me 🎀</p>
+<h3>✨ Featured Reels</h3>
+
+<div class="reels-grid">
+
+<a href="https://www.instagram.com/reel/DXMXZvYNG5N/" target="_blank">
+<img src="image/reel1.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DXO-uCittaP/" target="_blank">
+<img src="image/reel2.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DXb1gvuNtGF/" target="_blank">
+<img src="image/reel3.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DXmIV45Nb8a/" target="_blank">
+<img src="image/reel4.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DX60mwrNVbV/" target="_blank">
+<img src="image/reel5.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZSXf0RMRXE/" target="_blank">
+<img src="image/reel6.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZaGmc9NJX3/" target="_blank">
+<img src="image/reel7.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZkTttYtwWZ/" target="_blank">
+<img src="image/reel8.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZpkGYItHtj/" target="_blank">
+<img src="image/reel9.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DaLFwsXNUKL/" target="_blank">
+<img src="image/reel10.jpg" class="reel-thumb">
+</a>
+
+</div>
+
+<a href="https://www.instagram.com/prachiii__90?igsh=MTdiNWtsYXJmdzhheg==" target="_blank">
+Visit Instagram 💜
+</a>
+
+</div>
+
+</div>
+<div id="instaPopup" class="popup">
+
+<div class="popup-content">
+
+<span class="close"
+onclick="closePopup('instaPopup')">
+×
+</span>
+
+<img src="image/pfp.jpg" class="insta-pfp">
+
+<h2>@beingprachi_</h2>
+
+<p>🧿</p>
+
+<p>
+creator | dreamer | trend lover
+</p>
+
+<p>
+curated by me 🎀
+</p>
+
+<h3>✨ Featured Reels</h3>
+
+
+<div class="reels-grid">
+
+<a href="https://www.instagram.com/reel/DXMXZvYNG5N/" target="_blank">
+<img src="image/reel1.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DXO-uCittaP/" target="_blank">
+<img src="image/reel2.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DXb1gvuNtGF/" target="_blank">
+<img src="image/reel3.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DXmIV45Nb8a/" target="_blank">
+<img src="image/reel4.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DX60mwrNVbV/" target="_blank">
+<img src="image/reel5.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZSXf0RMRXE/" target="_blank">
+<img src="image/reel6.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZaGmc9NJX3/" target="_blank">
+<img src="image/reel7.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZkTttYtwWZ/" target="_blank">
+<img src="image/reel8.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DZpkGYItHtj/" target="_blank">
+<img src="image/reel9.jpg" class="reel-thumb">
+</a>
+
+<a href="https://www.instagram.com/reel/DaLFwsXNUKL/" target="_blank">
+<img src="image/reel10.jpg" class="reel-thumb">
+</a>
+
+</div>
+
+<a href="https://www.instagram.com/beingprachi_/" target="_blank">
+    <button class="visit-insta-btn">
+        📸 FOLLOW PRACHI ON INSTAGRAM 💜
+    </button>
+</a>
+
+</div>
+
+</div>
+<audio id="audioPlayer"></audio>
+<script src="script.js"></script>
+</body>
+</html>
