@@ -1,38 +1,237 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO Title & Description -->
+  <!-- Title & Meta Tags for SEO -->
   <title>Prachi's World | Prachi Bansod</title>
-  <meta name="description" content="Welcome to Prachi's World — the official website and portfolio of Prachi Bansod.">
+  <meta name="description" content="Welcome to Prachi's World — Curated music playlist, featured reels, and creative corner by Prachi Bansod.">
   <meta name="author" content="Prachi Bansod">
 
-  <!-- Google Search Console Verification Meta Tag -->
+  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="google9f410fb340f7bde3" />
 
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header Section -->
+  <!-- Top Title Header -->
   <header>
-    <h1>Prachi's World</h1>
-    <p>By Prachi Bansod</p>
+    <h1 class="world-title">PRACHI WORLD</h1>
+    <p class="world-subtitle">Curated Collection by Prachi Bansod</p>
   </header>
 
-  <!-- Main Content Area -->
-  <main>
-    <section>
-      <h2>Welcome</h2>
-      <p>Hello! Welcome to the official website of Prachi Bansod. Explore my projects, portfolio, and thoughts at Prachi's World.</p>
-    </section>
+  <!-- Main Playlist Section -->
+  <main id="playlistSection">
+    
+    <!-- Instagram Profile Trigger Button -->
+    <button class="insta-btn" onclick="openPopup('instaPopup')">
+      📸 @beingprachi_
+    </button>
+
+    <!-- Playlist Header Banner -->
+    <div class="playlist-header">
+      <img src="image/cover.jpg" class="cover" alt="Playlist Cover">
+      <h1>Prachi's Playlist 🎵</h1>
+      <p>Made specially for Prachi ❤️</p>
+      <p class="playlist-info">10 songs • 35 min • Made for Prachi Bansod ❤️</p>
+    </div>
+
+    <!-- View Mode Controls -->
+    <div class="view-controls">
+      <button id="cardBtn">🎴 Card View</button>
+      <button id="listBtn">🎧 List View</button>
+    </div>
+
+    <div class="play-section">
+      <button class="main-play">▶ Play Playlist</button>
+    </div>
+
+    <!-- Active Song Display -->
+    <div class="now-playing">
+      <img src="image/photo1.jpg" id="nowPlayingImg" alt="Now Playing Thumbnail">
+      <h2 id="nowPlayingSong">Tu Hi Mera</h2>
+      <p>Prachi's Playlist ❤️</p>
+    </div>
+
+    <!-- Audio Player Controls -->
+    <div class="player-controls">
+      <button id="prevBtn" aria-label="Previous Song">⏮</button>
+      <button id="playPauseBtn" aria-label="Play or Pause">▶</button>
+      <button id="nextBtn" aria-label="Next Song">⏭</button>
+    </div>
+
+    <input type="range" id="progressBar" value="0" aria-label="Song Progress">
+
+    <div class="time-display">
+      <span id="currentTime">0:00</span>
+      <span id="totalTime">0:00</span>
+    </div>
+
+    <!-- Song Cards Grid -->
+    <div class="songs-container">
+      <div class="song-card">
+        <img src="image/photo1.jpg" alt="Tu hi mera cover">
+        <h3>Tu hi mera</h3>
+        <button onclick="playSong(0)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo2.jpg" alt="Dhoka dhadi cover">
+        <h3>Dhoka dhadi</h3>
+        <button onclick="playSong(1)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo3.jpg" alt="Shirt da button cover">
+        <h3>Shirt da button</h3>
+        <button onclick="playSong(2)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo4.jpg" alt="Tu hi haqeeqat cover">
+        <h3>Tu hi haqeeqat</h3>
+        <button onclick="playSong(3)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo5.jpg" alt="Maula maula cover">
+        <h3>Maula maula</h3>
+        <button onclick="playSong(4)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo6.jpg" alt="Kinna sona cover">
+        <h3>Kinna sona</h3>
+        <button onclick="playSong(5)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo7.jpg" alt="Tera fitoor cover">
+        <h3>Tera fitoor</h3>
+        <button onclick="playSong(6)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo8.jpg" alt="Fakira cover">
+        <h3>Fakira</h3>
+        <button onclick="playSong(7)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo9.jpg" alt="Qafirana cover">
+        <h3>Qafirana</h3>
+        <button onclick="playSong(8)">▶ Play</button>
+      </div>
+
+      <div class="song-card">
+        <img src="image/photo10.jpg" alt="Dekh Lena cover">
+        <h3>Dekh Lena</h3>
+        <button onclick="playSong(9)">▶ Play</button>
+      </div>
+    </div>
+
+    <!-- Secret Message Trigger -->
+    <button id="secretBtn">💌 Secret Message</button>
+
+    <!-- Footer Quote Section -->
+    <div class="footer-message">
+      <p>
+        Some songs are heard. Some songs are felt.
+        This playlist is for the songs that stay. ❤️
+      </p>
+    </div>
+
+    <!-- Secret Message Popup -->
+    <div id="secretPopup" class="popup">
+      <div class="popup-content">
+        <h2>💌 Secret Message</h2>
+        <p>
+          Whenever you want to hear your favorite songs,
+          come back here. This playlist will always be
+          waiting for you. 💜🎵
+        </p>
+        <button id="closePopup">Close</button>
+      </div>
+    </div>
+
   </main>
 
-  <!-- Footer / Bottom Signature -->
+  <!-- Instagram Profile Modal Popup -->
+  <div id="instaPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('instaPopup')">&times;</span>
+
+      <img src="image/pfp.jpg" class="insta-pfp" alt="Prachi Bansod Profile Picture">
+
+      <h2>@beingprachi_</h2>
+      <p>🧿</p>
+      <p>creator | dreamer | trend lover</p>
+      <p>curated by Prachi Bansod 🎀</p>
+
+      <h3>✨ Featured Reels</h3>
+
+      <div class="reels-grid">
+        <a href="https://www.instagram.com/reel/DXMXZvYNG5N/" target="_blank" rel="noopener">
+          <img src="image/reel1.jpg" class="reel-thumb" alt="Featured Reel 1">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DXO-uCittaP/" target="_blank" rel="noopener">
+          <img src="image/reel2.jpg" class="reel-thumb" alt="Featured Reel 2">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DXb1gvuNtGF/" target="_blank" rel="noopener">
+          <img src="image/reel3.jpg" class="reel-thumb" alt="Featured Reel 3">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DXmIV45Nb8a/" target="_blank" rel="noopener">
+          <img src="image/reel4.jpg" class="reel-thumb" alt="Featured Reel 4">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DX60mwrNVbV/" target="_blank" rel="noopener">
+          <img src="image/reel5.jpg" class="reel-thumb" alt="Featured Reel 5">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DZSXf0RMRXE/" target="_blank" rel="noopener">
+          <img src="image/reel6.jpg" class="reel-thumb" alt="Featured Reel 6">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DZaGmc9NJX3/" target="_blank" rel="noopener">
+          <img src="image/reel7.jpg" class="reel-thumb" alt="Featured Reel 7">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DZkTttYtwWZ/" target="_blank" rel="noopener">
+          <img src="image/reel8.jpg" class="reel-thumb" alt="Featured Reel 8">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DZpkGYItHtj/" target="_blank" rel="noopener">
+          <img src="image/reel9.jpg" class="reel-thumb" alt="Featured Reel 9">
+        </a>
+
+        <a href="https://www.instagram.com/reel/DaLFwsXNUKL/" target="_blank" rel="noopener">
+          <img src="image/reel10.jpg" class="reel-thumb" alt="Featured Reel 10">
+        </a>
+      </div>
+
+      <a href="https://www.instagram.com/beingprachi_/" target="_blank" rel="noopener">
+        <button class="visit-insta-btn">
+          📸 FOLLOW PRACHI ON INSTAGRAM 💜
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Footer Branding -->
   <footer>
-    <p>© 2026 Prachi's World | Created by Prachi Bansod. All rights reserved.</p>
+    <p>© 2026 Prachi's World | Handcrafted by Prachi Bansod</p>
   </footer>
 
+  <!-- Audio Element & External Script -->
+  <audio id="audioPlayer"></audio>
+  <script src="script.js"></script>
+
 </body>
-</html>
+  </html>
+
